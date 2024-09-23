@@ -1,0 +1,220 @@
+/* Font Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: auto;
+    background-color: #0a0a0a; /* Dark background */
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+header .logo {
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ace3f0; /* Ice blue for the logo */
+}
+
+nav {
+   position: relative;
+}
+
+nav .hamburger {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+nav .hamburger .line {
+   width: 25px;
+   height: 3px;
+   background-color: #ace3f0; /* Ice blue for hamburger lines */
+   margin: 4px 0;
+}
+
+nav .nav-links {
+   display: flex;
+   list-style: none;
+   align-items: center;
+}
+
+nav .nav-links li {
+   margin: 0 10px;
+}
+
+header nav a {
+   position: relative;
+   font-size: 18px;
+   text-transform: capitalize;
+   text-decoration: none;
+   font-weight: 500;
+   margin: 10px;
+   padding: 8px 10px;
+   color: #fff;
+   z-index: 2;
+   transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+header nav a:hover {
+   color: #0a0a0a; /* Dark background on hover */
+   background-color: rgba(172, 227, 240, 0.5); /* Light ice blue background on hover */
+   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+   nav .nav-links {
+       display: none; /* Hide links by default */
+       flex-direction: column;
+       position: absolute;
+       top: 60px; /* Adjust based on header height */
+       left: 0;
+       background-color: rgba(20, 20, 20, 0.9);
+       width: 100%;
+       padding: 10px 0;
+       align-items: center;
+   }
+
+   nav .hamburger {
+       display: flex; /* Show hamburger icon */
+   }
+
+   nav .nav-links.active {
+       display: flex; /* Show links when active */
+   }
+
+   header .logo {
+       font-size: 28px; /* Smaller logo on mobile */
+   }
+
+   header nav a {
+       font-size: 16px; /* Smaller nav links */
+       margin: 5px; /* Less margin for links */
+   }
+
+   .Home {
+       padding: 20px; /* Less padding on smaller screens */
+       flex-direction: column; /* Stack content and image vertically */
+       align-items: center; /* Center align content */
+   }
+
+   .Home img {
+       height: 250px; /* Smaller image height */
+       margin-left: 0; /* Remove margin */
+       margin-top: 20px; /* Add top margin for spacing */
+   }
+}
+
+@media (max-width: 480px) {
+   header {
+       flex-direction: column; /* Stack header elements */
+       padding: 10px; /* Less padding */
+   }
+
+   header nav {
+       flex-direction: column; /* Stack nav links */
+       align-items: center; /* Center nav items */
+   }
+
+   .Home .content .btn {
+       padding: 12px 36px; /* Increase button padding */
+       font-size: 24px;
+       background-color: #ace3f0; /* Ice blue button background */
+       color: #fff; /* Button text color */
+       border: none; /* Remove border */
+       border-radius: 5px; /* Rounded corners */
+       cursor: pointer;
+       transition: background-color 0.3s ease; /* Button hover transition */
+   }
+
+   .Home .content .btn:hover {
+       background-color: #8cc7db; /* Darker ice blue on hover */
+   }
+}
+
+.Home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 6%;
+}
+
+.Home h1 {
+    font-size: 65px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #ace3f0; /* Ice blue for headings */
+}
+
+.Home h3 {
+    font-size: 22px;
+    color: #d1d1d1;
+    margin: 20px 0;
+}
+
+.details {
+   padding: 100px 6%;
+ 
+}
+
+.details h2 {
+   font-size: 35px;
+   color: #ace3f0; /* Ice blue for section headings */
+   margin-bottom: 20px;
+}
+
+.project-item, .activity-item {
+   margin: 20px 0;
+   background-color: rgba(20, 20, 20, 0.8); /* Darker background for items */
+   padding: 15px;
+   border-radius: 8px;
+   transition: transform 0.2s; /* Animation on hover */
+}
+
+.project-item:hover, .activity-item:hover {
+   transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-item h3, .activity-item h3 {
+   color: #ace3f0; /* Ice blue for item titles */
+}
+
+.project-item ul, .activity-item ul {
+   list-style-type: disc;
+   margin-left: 20px; /* Indent for list items */
+   color: #e0e0e0; /* Light gray for list text */
+}
+
+footer {
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 40px 6%;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 30px;
+    color: #ace3f0; /* Ice blue for footer heading */
+}
+
+footer p {
+    color: #e0e0e0; /* Light gray for footer text */
+}
